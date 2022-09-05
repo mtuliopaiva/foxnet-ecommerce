@@ -1,0 +1,26 @@
+.produtos{
+    margin: 2% 2%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.plano__box{
+    text-align: center;
+    border: 1px #000000 solid;
+    padding: 3% 3%;
+    margin: 0 2%;
+    
+}
+.internet__titulo, .fixo__titulo,.tv__titulo{
+    font-size: 1.675rem;
+}
+.internet__descricao, .fixo__descricao, .tv__descricao{
+    font-size: 1rem;
+    margin: 2% 0;
+}
+.internet__planos, .fixo__planos, .tv__planos{
+    margin: 2% 0;
+    display: flex;
+    flex-direction: row;
+    
+}

@@ -17,40 +17,75 @@
         </header>
 
         <main>
-
-            <section class="internet"></section>
+            <div class="produtos">
+            <section class="internet">
             <h2 class="internet__titulo">Internet</h2>
             <legend class="internet__descricao">Selecione um plano de internet para continuar:</legend>
 
             <div class="internet__planos">
                 
-                <div>
-                    <input id="plano" type="radio" name="plano" value="79.90" checked> <label for="internet">4 Mega</label>
-                    <p class="valor">R$ 79,90</p>
+                <div class="plano__box">
+                    <input id="plano__internet" type="radio" name="net" value="99.90" checked> 
+                    <label for="internet">300 MB</label>
+                    <p class="valor">R$ 99,90</p>
                 </div>
 
-                <div>
-                <input id="plano" type="radio" name="plano" value="34.90"> <label for="internet">1 Mega</label>
-                    <p class="valor">R$ 34,90</p>
+                <div class="plano__box">
+                <input id="plano__internet" type="radio" name="net" value="75.90" data-valor="75.9"> <label for="internet" data-plano>200 MB</label>
+                    <p class="valor">R$ 75,90</p>
                 </div>
 
-                <div>
-                    <input id="plano" type="radio" name="plano" value="45.90"> <label for="internet">2 Mega</label>
-                        <p class="valor">R$ 45,90</p>
+                <div class="plano__box">
+                    <input id="plano__internet" type="radio" name="net" value="60.90"> <label for="internet">100MB</label>
+                        <p class="valor">R$ 60,90</p>
                 </div>
-
-                <div>
-                    <input id="plano" type="radio" name="plano" value="89,90"> <label for="internet">8 Mega</label>
-                        <p class="valor">R$ 89,90</p>
-                </div>
-                    
-
-                    
-
 
             </div>
+            </section>
 
-            </label>
+            <section class="fixo">
+            <h2 class="fixo__titulo">Fixo</h2>
+            <legend class="fixo__descricao">Agora selecione um pacote de telefone fixo:</legend>
+
+            <div class="fixo__planos">
+                <div class="plano__box">
+                    <input id="plano__fixo" type="radio" name="fixo" value="25.90"> <label for="fixo">Vivo fixo Ilimitado Brasil</label>
+                    <p class="valor">R$ 25,90</p>
+                </div>
+
+                <div class="plano__box">
+                    <input id="plano__fixo" type="radio" name="fixo" value="0"> <label for="fixo">Não desejo telefone fixo</label>
+                </div>
+            </section>
+
+            <section class="tv">
+                <h2 class="tv__titulo">Fixo</h2>
+                <legend class="tv__descricao">Escolha o seu pacote de TV favorito:</legend>
+    
+                <div class="tv__planos">
+                    <div class="plano__box">
+                        <input id="plano" type="radio" name="tv" value="35"> <label for="tv">Ultimate HD</label>
+                        <p class="valor">R$ 35,00</p>
+                    </div>
+
+                    <div class="plano__box">
+                        <input id="plano" type="radio" name="tv" value="19.90"> <label for="tv">Full HD</label>
+                        <p class="valor">R$ 19,90</p>
+                    </div>
+
+                    <div class="plano__box">
+                        <input id="plano" type="radio" name="fixo" value="0"> <label for="tv">Não desejo TV por assinatura</label>
+                    </div>
+                </section>
+
+
+
+        </div>
+
+            <div class="carrinho">
+                <p>Meu carrinho</p>
+                <p id="carrinho__valor" value="0">R$ 0.00</p>
+            </div>
         </main>
 
         <footer>
