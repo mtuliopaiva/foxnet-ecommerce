@@ -17,75 +17,37 @@
         </header>
 
         <main>
-            <div class="produtos">
-            <section class="internet">
-            <h2 class="internet__titulo">Internet</h2>
-            <legend class="internet__descricao">Selecione um plano de internet para continuar:</legend>
 
-            <div class="internet__planos">
-                
-                <div class="plano__box">
-                    <input id="plano__internet" type="radio" name="net" value="99.90" checked> 
-                    <label for="internet">300 MB</label>
-                    <p class="valor">R$ 99,90</p>
-                </div>
+            <section class="planos">
+                <form class="form__planos">
 
-                <div class="plano__box">
-                <input id="plano__internet" type="radio" name="net" value="75.90" data-valor="75.9"> <label for="internet" data-plano>200 MB</label>
-                    <p class="valor">R$ 75,90</p>
-                </div>
 
-                <div class="plano__box">
-                    <input id="plano__internet" type="radio" name="net" value="60.90"> <label for="internet">100MB</label>
-                        <p class="valor">R$ 60,90</p>
-                </div>
+                    <div class="internet__planos">
+                        <h2 class="internet__titulo">Internet</h2>
+                        <legend class="internet__descricao">Selecione um plano de internet para continuar:</legend>
 
-            </div>
+                        <div class="plano">
+                            <input id="plano__internet" type="radio" name="net" data-nome="300 MB" data-valor="99.9"> 
+                            <label class="plano__titulo" for="internet">300 MB</label>
+                            <p class="plano__valor">R$ 99,90</p>
+                        </div>
+
+                        <div class="plano">
+                            <input id="plano__internet" type="radio" name="net" data-nome="200 MB" data-valor="79.9"> 
+                            <label class="plano__titulo" for="internet">200 MB</label>
+                            <p class="plano__valor">R$ 79,90</p>
+                        </div>
+
+
+                    </div>
+                </form>
             </section>
 
-            <section class="fixo">
-            <h2 class="fixo__titulo">Fixo</h2>
-            <legend class="fixo__descricao">Agora selecione um pacote de telefone fixo:</legend>
 
-            <div class="fixo__planos">
-                <div class="plano__box">
-                    <input id="plano__fixo" type="radio" name="fixo" value="25.90"> <label for="fixo">Vivo fixo Ilimitado Brasil</label>
-                    <p class="valor">R$ 25,90</p>
-                </div>
-
-                <div class="plano__box">
-                    <input id="plano__fixo" type="radio" name="fixo" value="0"> <label for="fixo">Não desejo telefone fixo</label>
-                </div>
-            </section>
-
-            <section class="tv">
-                <h2 class="tv__titulo">Fixo</h2>
-                <legend class="tv__descricao">Escolha o seu pacote de TV favorito:</legend>
-    
-                <div class="tv__planos">
-                    <div class="plano__box">
-                        <input id="plano" type="radio" name="tv" value="35"> <label for="tv">Ultimate HD</label>
-                        <p class="valor">R$ 35,00</p>
-                    </div>
-
-                    <div class="plano__box">
-                        <input id="plano" type="radio" name="tv" value="19.90"> <label for="tv">Full HD</label>
-                        <p class="valor">R$ 19,90</p>
-                    </div>
-
-                    <div class="plano__box">
-                        <input id="plano" type="radio" name="fixo" value="0"> <label for="tv">Não desejo TV por assinatura</label>
-                    </div>
-                </section>
-
-
-
-        </div>
-
-            <div class="carrinho">
+            <section class="carrinho">
                 <p>Meu carrinho</p>
                 <p id="carrinho__valor" value="0">R$ 0.00</p>
-            </div>
+            </section>
         </main>
 
         <footer>
