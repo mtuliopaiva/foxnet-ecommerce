@@ -12,8 +12,8 @@
         <link href="./assets/css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <h1>FoxNet - O melhor provedor de internet do Brasil</h1>
+        <header class="cabecalho">
+            <h1 class="cabecalho__titulo">FoxNet - O melhor provedor de internet do Brasil</h1>
         </header>
 
         <main>
@@ -22,30 +22,76 @@
                 <form class="form__planos">
 
 
-                    <div class="internet__planos">
-                        <h2 class="internet__titulo">Internet</h2>
-                        <legend class="internet__descricao">Selecione um plano de internet para continuar:</legend>
+                    <div class="internet">
+                        <h2 class="titulo">Internet</h2>
+                        <legend class="descricao">Selecione um plano de internet para continuar:</legend>
 
-                        <div class="plano">
-                            <input id="plano__internet" type="radio" name="net" data-nome="300 MB" data-valor="99.9"> 
-                            <label class="plano__titulo" for="internet">300 MB</label>
-                            <p class="plano__valor">R$ 99,90</p>
+                        <div class="internet__planos">
+                            <div class="plano">
+                                <input class="plano__internet" type="radio" name="net" data-nome="300 MB" data-valor="99.9"> 
+                                <label class="plano__titulo" for="internet">300 MB</label>
+                                <p class="plano__valor">R$ 99,90</p>
+                            </div>
+
+                            <div class="plano">
+                                <input class="plano__internet" type="radio" name="net" data-nome="200 MB" data-valor="79.9"> 
+                                <label class="plano__titulo" for="internet">200 MB</label>
+                                <p class="plano__valor">R$ 79,90</p>
+                            </div>
+
+                            <div class="plano">
+                                <input class="plano__internet" type="radio" name="net" data-nome="100 MB" data-valor="79.9"> 
+                                <label class="plano__titulo" for="internet">100 MB</label>
+                                <p class="plano__valor">R$ 59,90</p>
+                            </div>
+
                         </div>
-
-                        <div class="plano">
-                            <input id="plano__internet" type="radio" name="net" data-nome="200 MB" data-valor="79.9"> 
-                            <label class="plano__titulo" for="internet">200 MB</label>
-                            <p class="plano__valor">R$ 79,90</p>
-                        </div>
-
 
                     </div>
-                </form>
+
+                    <div class="fixo">
+                        <h2 class="titulo">Telefone fixo</h2>
+                        
+                        <legend class="descricao">Agora selecione um plano de telefone fixo para continuar:</legend>
+                        <div class="fixo__planos">
+                            <div class="plano">
+                                <input class="plano__fixo" type="radio" name="fixo" data-nome="Ilimitado Fixo Brasil" data-valor="19.9"> 
+                                <label class="plano__titulo" for="fixo">Ilimitado Fixo Brasil</label>
+                                <p class="plano__valor">R$ 19,90</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tv">
+                        <h2 class="titulo">TV</h2>
+                        
+                        <legend class="descricao">Selecione um plano de TV:</legend>
+                        <div class="tv__planos">
+                            <div class="plano">
+                                <input class="plano__tv" type="radio" name="tv" data-nome="Ultimate HD" data-valor="60"> 
+                                <label class="plano__titulo" for="tv">Ultimate HD</label>
+                                <p class="plano__valor">R$ 65,00</p>
+                            </div>
+                        </div>
+
+                        <div class="tv__planos">
+                            <div class="plano">
+                                <input class="plano__tv" type="radio" name="tv" data-nome="Full HD" data-valor="49.9"> 
+                                <label class="plano__titulo" for="tv">Full HD</label>
+                                <p class="plano__valor">R$ 46,90</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    </form>
             </section>
 
 
             <section class="carrinho">
                 <p>Meu carrinho</p>
+                <p>Planos selecionados:</p>
+                <ul id="carrinho__planos"></ul>
                 <p id="carrinho__valor" value="0">R$ 0.00</p>
             </section>
         </main>
