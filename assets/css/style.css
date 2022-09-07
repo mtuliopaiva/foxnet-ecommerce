@@ -3,23 +3,14 @@ color: #FE6700
 color: #ffffff
 color:  */
 
-.cabecalho{
-    padding: 1% 0;
-    background: #FE6700;
-}
-.cabecalho__img{
-    margin: 1% 2%;
-    width: 5%;
-    border-radius: 100%;
-    background-color: #ffffff;
-    
-}
+
 .cabecalho__titulo{
-    position: absolute;
-    top: 10%;
-    left: 10%;
     font-size: 1.675rem;
-    color: #ffffff;
+    margin: 1% 2%;
+}
+.cabecalho__descricao{
+    font-size: 1rem;
+    margin: 1% 2%;
 }
 .titulo{
     margin: 1% 2%;
@@ -27,25 +18,17 @@ color:  */
 .descricao{
     margin: 1% 2%;
 }
-.internet__planos{
-    margin: 1% 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.fixo__planos, .tv__planos{
-    margin: 1% 2%;
-    display: flex;
-    flex-direction: row;
-    
-}
 .plano{
-    border: 1px solid #FE6700;
-    padding: 5% 4%;
-    background: #FE6700;
-    color: #ffffff;
-    font-weight: bold
+    width: 30%;
+    border: 1px solid;
 }
+
+.internet__planos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
 .fixo, .tv{
     opacity: 0;
 }
