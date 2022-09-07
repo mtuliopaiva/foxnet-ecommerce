@@ -1,18 +1,50 @@
 /* PALETA DE CORES 
-color: #3e3E40;
-color: #d94a56;
-color: #f2f2f2; */
+color: #FE6700
+color: #ffffff
+color:  */
 
 .cabecalho{
-    background: #ffffff;
+    padding: 1% 0;
+    background: #FE6700;
+}
+.cabecalho__img{
+    margin: 1% 2%;
+    width: 5%;
+    border-radius: 100%;
+    background-color: #ffffff;
+    
 }
 .cabecalho__titulo{
-    color: #d94a56;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 1.675rem;
+    color: #ffffff;
+}
+.titulo{
+    margin: 1% 2%;
+}
+.descricao{
+    margin: 1% 2%;
 }
 .internet__planos{
-    margin: 2% 2%;
-    display: grid;
-    grid-template-columns: 10% 10% 10%;
+    margin: 1% 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.fixo__planos, .tv__planos{
+    margin: 1% 2%;
+    display: flex;
+    flex-direction: row;
+    
+}
+.plano{
+    border: 1px solid #FE6700;
+    padding: 5% 4%;
+    background: #FE6700;
+    color: #ffffff;
+    font-weight: bold
 }
 .fixo, .tv{
     opacity: 0;
