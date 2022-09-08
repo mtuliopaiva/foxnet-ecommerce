@@ -10,7 +10,7 @@ color:  */
 
 /*CSS cabecalho*/
 .cabecalho{
-    background: #f5f7ff;
+    background: #ffffff;
     padding: 1% 1%;
 }
 .cabecalho__titulo{
@@ -25,12 +25,20 @@ color:  */
     font-weight: 400;
     margin: 1% 2%;
 }
+main{
+    background: #F5F5F5;
+}
 /*CSS titulos e descrições - Internet, telefone fixo e TV*/
+.internet__descricao, .fixo__descricao, .tv__descricao{
+    margin: 5% 0 0 0;
+}
+.fixo__descricao, .tv__descricao{
+    margin: 15% 0 0 0;
+}
 .titulo{
     font-family: "Inter", sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    margin: 1% 2%;
 }
 .descricao{
     font-family: "Inter", sans-serif;
@@ -45,6 +53,7 @@ color:  */
     flex-direction: row;
     width: 1440px;
     margin: 1% 5%;
+    
 }
 
 /*CSS para cards INTERNET*/
@@ -55,11 +64,10 @@ color:  */
 }
 /*css para formatação de cada card*/
 .plano{
-    border: 1px solid;
-    border-radius: 3%;
-    background: #f0f2fa;
-    cursor:pointer;
-    margin: 5% 0;
+    border: 1px solid #ffffff;
+    border-radius: 5%;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
 }
 
 .plano:hover {
@@ -70,14 +78,14 @@ color:  */
     font-family: "Inter", sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
-    padding-left: 1px;
-   
+    padding-left: 20px;
 }
 .plano__valor{
     color: #1e202a;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     font-weight: 700;
+    padding-left: 20px;
 }
 .plano__detalhes{
     font-family: "Inter", sans-serif;
@@ -85,6 +93,25 @@ color:  */
     color: #1db489;
     font-weight: 700;
 }
+
+.btn__adicionar{
+    background-color: #A82472;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 2% 10%;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-left: 25%;
+    border: #A82472;
+    border-radius: 5%;
+}
+.btn__adicionar:hover{
+    text-decoration: underline;
+}
+.btn__adicionar::first-letter{
+    text-transform: uppercase;
+}
 .fixo, .tv, .carrinho{
-    opacity: 1;
+    opacity: 0;
 }
