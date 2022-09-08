@@ -3,32 +3,88 @@ color: #FE6700
 color: #ffffff
 color:  */
 
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter-VariableFont_slnt\,wght.ttf');
+}
 
+/*CSS cabecalho*/
+.cabecalho{
+    background: #f5f7ff;
+    padding: 1% 1%;
+}
 .cabecalho__titulo{
-    font-size: 1.675rem;
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
     margin: 1% 2%;
 }
 .cabecalho__descricao{
-    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
     margin: 1% 2%;
 }
+/*CSS titulos e descrições - Internet, telefone fixo e TV*/
 .titulo{
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
     margin: 1% 2%;
 }
 .descricao{
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
     margin: 1% 2%;
 }
-.plano{
-    width: 30%;
-    border: 1px solid;
+
+/*CSS para os planos de internet, fixo e tv*/
+.planos{
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    margin: 1% 5%;
 }
 
-.internet__planos{
+/*CSS para cards INTERNET*/
+.internet__planos, .fixo__planos, .tv__planos{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 40% 40% 40%;
+    column-gap: 5%;
+}
+/*css para formatação de cada card*/
+.plano{
+    border: 1px solid;
+    border-radius: 3%;
+    background: #f0f2fa;
+    cursor:pointer;
+    margin: 5% 0;
 }
 
-
-.fixo, .tv{
-    opacity: 0;
+.plano:hover {
+    background: #aeb3cb;
+    transition: .5s;
+}
+.plano__titulo{
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding-left: 1px;
+   
+}
+.plano__valor{
+    color: #1e202a;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.plano__detalhes{
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #1db489;
+    font-weight: 700;
+}
+.fixo, .tv, .carrinho{
+    opacity: 1;
 }

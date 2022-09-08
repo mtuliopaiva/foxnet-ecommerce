@@ -1,6 +1,7 @@
 var internet = document.querySelectorAll('.plano__internet');
 var fixo = document.querySelectorAll('.plano__fixo');
 var tv = document.querySelectorAll('.plano__tv');
+var carrinho = document.querySelector('.carrinho');
 
 
 const lista = document.getElementById('carrinho__planos');
@@ -17,6 +18,7 @@ internet.forEach(plano => {
             
             telefoneFixo.style.cssText = 'opacity: 1;';
             tv.style.cssText = 'opacity: 1;';
+            carrinho.style.cssText = 'opacity: 1;';
 
 
             console.log(evento.target);
