@@ -118,5 +118,5 @@ main{
     text-transform: uppercase;
 }
 .fixo, .tv, .carrinho{
-    opacity: 0;
+    opacity: 1;
 }

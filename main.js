@@ -11,6 +11,56 @@ var cart = 0;
 
 
 
+
+internet.forEach(plano => {
+    plano.addEventListener('click', evento => {
+        
+        const botoesInternet = evento.path[3].childNodes[1].childNodes[1].childNodes[7];
+        console.log(evento.path[3].childNodes.length);
+
+
+        console.log(evento.path);
+        console.log(evento.path[3].childNodes[1].childNodes[1].childNodes[7]);
+        console.log(evento.path[3].childNodes[3].childNodes[1].childNodes[7]);
+        console.log(evento.path[3].childNodes[5].childNodes[1].childNodes[7]);
+        /*div plano - plano__internet*/ 
+
+        evento.path[0].disabled = false;
+        
+            var telefoneFixo = document.querySelector('.fixo');
+            var tv = document.querySelector('.tv');
+            var carrinhoValor = document.querySelector('#carrinho__valor');
+            const selecionadoValor = evento.target.dataset.valor;
+            const selecionadoNome = evento.target.dataset.nome;
+            var li = document.createElement("li");
+
+            telefoneFixo.style.cssText = 'opacity: 1;';
+            tv.style.cssText = 'opacity: 1;';
+            
+
+            console.log(selecionadoValor);
+            console.log(selecionadoNome);
+
+            
+            cart = (parseFloat(selecionadoValor)) + (parseFloat(cart));
+            console.log(cart.toFixed(2));
+            carrinho = (cart.toFixed(2));
+            console.log(carrinho);
+            carrinhoValor.textContent = '' +'Sub-total:'+ 'R$' + '     ' + carrinho;
+
+            lista.appendChild(li);
+            li.appendChild(document.createTextNode(selecionadoNome + '     ' + 'R$' + selecionadoValor));
+        
+
+    }
+    )
+})
+
+function toggleButton(){
+
+}
+
+
 // detalhes.forEach(detalhes => {
 //     detalhes.addEventListener('click', evento =>{
         
@@ -89,37 +139,3 @@ var cart = 0;
 //     })
 // })
 /*Evento de clique para selecionar os inputs dos planos*/
-internet.forEach(plano => {
-    plano.addEventListener('click', evento => {
-        
-        
-        console.log(evento.target);
-        if(evento.target){
-            console.log("Entrou na condiCAO");
-            var telefoneFixo = document.querySelector('.fixo');
-            var tv = document.querySelector('.tv');
-            
-            telefoneFixo.style.cssText = 'opacity: 1;';
-            tv.style.cssText = 'opacity: 1;';
-            carrinho.style.cssText = 'opacity: 1;';
-
-
-            
-            const selecionadoValor = evento.target.dataset.valor;
-            const selecionadoNome = evento.target.dataset.nome;
-            var li = document.createElement("li");
-
-
-            console.log(selecionadoValor);
-            console.log(selecionadoNome);
-
-            lista.appendChild(li);
-            li.appendChild(document.createTextNode(selecionadoNome));
-        }
-        else{
-
-        }
-
-    }
-    )
-})
