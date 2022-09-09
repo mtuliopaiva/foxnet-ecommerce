@@ -51,7 +51,6 @@ main{
 .planos{
     display: flex;
     flex-direction: row;
-    width: 1440px;
     margin: 1% 5%;
     
 }
@@ -90,8 +89,13 @@ main{
 .plano__detalhes{
     font-family: "Inter", sans-serif;
     font-size: 1rem;
-    color: #1db489;
+    color: #A82472;
     font-weight: 700;
+    cursor: pointer;
+}
+.plano__detalhes:hover{
+    transition-duration: 2s;
+    text-decoration: underline;
 }
 
 .btn__adicionar{
@@ -106,6 +110,7 @@ main{
     border: #A82472;
     border-radius: 5%;
 }
+
 .btn__adicionar:hover{
     text-decoration: underline;
 }
