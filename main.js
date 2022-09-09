@@ -1,141 +1,92 @@
-var internet = document.querySelectorAll('.btn__adicionar');
-const detalhes = document.querySelectorAll('.plano__detalhes');
-var fixo = document.querySelectorAll('.plano__fixo');
-var tv = document.querySelectorAll('.plano__tv');
-var carrinho = document.querySelector('.carrinho');
+const internet = document.querySelectorAll('.internet__adicionar');
+const fixo = document.querySelectorAll('.fixo__adicionar');
+const tv = document.querySelectorAll('.tv__adicionar');
 
 
+
+var carrinhoValor = document.querySelector('#carrinho__valor');
+const finalizar = document.querySelector('.carrinho__finalizar');
+const clear = document.querySelector('.limpar');
 const lista = document.getElementById('carrinho__planos');
-var cart = 0;
 
-
-
-
+var c = 0;
 
 internet.forEach(plano => {
     plano.addEventListener('click', evento => {
         
-        const botoesInternet = evento.path[3].childNodes[1].childNodes[1].childNodes[7];
-        console.log(evento.path[3].childNodes.length);
+        const botaoInternet1 = evento.path[3].childNodes[1].childNodes[1].childNodes[7];
+        const botaoInternet2 = evento.path[3].childNodes[3].childNodes[1].childNodes[7];
+        const botaoInternet3 = evento.path[3].childNodes[5].childNodes[1].childNodes[7];
 
-
-        console.log(evento.path);
-        console.log(evento.path[3].childNodes[1].childNodes[1].childNodes[7]);
-        console.log(evento.path[3].childNodes[3].childNodes[1].childNodes[7]);
-        console.log(evento.path[3].childNodes[5].childNodes[1].childNodes[7]);
-        /*div plano - plano__internet*/ 
-
-        evento.path[0].disabled = false;
+        botaoInternet1.disabled = true;
+        botaoInternet2.disabled = true;
+        botaoInternet3.disabled = true;
         
-            var telefoneFixo = document.querySelector('.fixo');
-            var tv = document.querySelector('.tv');
-            var carrinhoValor = document.querySelector('#carrinho__valor');
-            const selecionadoValor = evento.target.dataset.valor;
-            const selecionadoNome = evento.target.dataset.nome;
-            var li = document.createElement("li");
-
-            telefoneFixo.style.cssText = 'opacity: 1;';
-            tv.style.cssText = 'opacity: 1;';
-            
-
-            console.log(selecionadoValor);
-            console.log(selecionadoNome);
-
-            
-            cart = (parseFloat(selecionadoValor)) + (parseFloat(cart));
-            console.log(cart.toFixed(2));
-            carrinho = (cart.toFixed(2));
-            console.log(carrinho);
-            carrinhoValor.textContent = '' +'Sub-total:'+ 'R$' + '     ' + carrinho;
-
-            lista.appendChild(li);
-            li.appendChild(document.createTextNode(selecionadoNome + '     ' + 'R$' + selecionadoValor));
+        const fixo = document.querySelector('.fixo');
         
 
+        const selecionadoNome = evento.target.dataset.nome;
+        const selecionadoValor = evento.target.dataset.valor;
+        
+        
+
+        fixo.style.cssText = 'display: block;';
+            
+        console.log(selecionadoNome);
+        console.log(selecionadoValor);
+
+        c = parseFloat(c) + parseFloat(selecionadoValor);
+        console.log(c);
+
+        carrinhoValor.textContent='R$'+''+ c.toFixed(2);
+
+        const li = document.createElement("li");
+
+        li.appendChild(document.createTextNode(selecionadoNome));
+        lista.appendChild(li); //adiciona um lista na ul
     }
     )
 })
+fixo.forEach(plano =>{
+    plano.addEventListener('click', evento => {
+        console.log(evento.target.dataset.nome);
+        console.log(evento.target.dataset.valor);
+        const botaFixo = evento.target.disabled = true;
+        const selecionadoNome = evento.target.dataset.nome;
+        const selecionadoValor = evento.target.dataset.valor;
+        const tv = document.querySelector('.tv');
 
-function toggleButton(){
+        tv.style.cssText = 'display: block;';
 
-}
-
-
-// detalhes.forEach(detalhes => {
-//     detalhes.addEventListener('click', evento =>{
-        
-//         console.log(evento.target);
-//         console.log(evento);
-//         const texto = evento.path[1].children[0];
-//         const valor = evento.path[1].children[1];
-//         const detalhe = evento.path[1].children[2];
-//         console.log(evento.path[1]);
-//         console.log(texto);
-//         console.log(valor);
-//         // texto.style.cssText = 'display: none;';
-//         // valor.style.cssText = 'display: none;';
-//         // detalhe.textContent = "- detalhes";
-
-//         switch(evento.target.dataset.nome) {
-//             case '300 MB':
-//                 let btn__detalhe ='1';
-//                 console.log("Primeiro caso");
-//                 if(btn__detalhe =='1'){
-                    
-//                     texto.style.cssText = 'opacity: 0';
-//                     valor.style.cssText = 'font-size: 0.8rem';
-//                     valor.textContent = "Bonus: + 300 MB";
-//                     detalhe.textContent = "- detalhes";
-//                     btn__detalhe=0;
-//                 }
-//                 if(btn__detalhe =='0'){
-//                     texto.style.cssText = 'opacity: 1';
-//                     valor.style.cssText = 'font-size: 1rem';
-//                     valor.textContent = "R$ 99,90";
-//                     detalhe.textContent = "+ detalhes";
-//                     btn__detalhe=0;
-//                 }
-
-//                 break;
-
-//             case '200 MB':
-//                 console.log("Segundo caso");
-//                 detalhe.textContent = "- detalhes";
-//                 break;
-
-//             case '100 MB':
-//                 console.log("Terceiro caso");
-//                 detalhe.textContent = "- detalhes";
-//                 break;
-
-//             case 'ilimitado':
-//                 console.log("Quarto caso");
-//                 detalhe.textContent = "- detalhes";
-//                 break;
-
-//             case 'Ultimate HD':
-//                 console.log("5 caso");
-//                 detalhe.textContent = "- detalhes";
-//                 break;
-
-//             case 'Full HD':
-//                 console.log("6 caso");
-//                 detalhe.textContent = "- detalhes";
-//                 break;
-//         }
+        c = parseFloat(c) + parseFloat(selecionadoValor);
+        console.log(c);
 
 
-        // if(evento.target.dataset.nome=='300 MB'){
-        //     console.log("Pirmeiro plano");
-        // }
-        // else{
-        //     if(evento.target.dataset.nome=='200 MB'){
-        //         console.log("Segundo plano");
-        //     }
-        //     else{
-        //         console.log("Terceiro plano");
-        //     }
-        // }
-//     })
-// })
-/*Evento de clique para selecionar os inputs dos planos*/
+        carrinhoValor.textContent='R$'+''+ c.toFixed(2);
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(selecionadoNome));
+        lista.appendChild(li); //adiciona um lista na ul
+    })
+})
+
+tv.forEach(plano =>{
+    plano.addEventListener('click', evento => {
+        const botatv1 = evento.path[3].childNodes[1].childNodes[1].childNodes[7];
+        const botatv2 = evento.path[3].childNodes[3].childNodes[1].childNodes[7];
+        const selecionadoNome = evento.target.dataset.nome;
+        const selecionadoValor = evento.target.dataset.valor;
+        botatv1.disabled =true;
+        botatv2.disabled =true;
+        console.log(evento.target.dataset.nome);
+        console.log(evento.target.dataset.valor);
+
+        c = parseFloat(c) + parseFloat(selecionadoValor);
+        console.log(c);
+
+        carrinhoValor.textContent='R$'+''+ c.toFixed(2);
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(selecionadoNome));
+        lista.appendChild(li); //adiciona um lista na ul
+    })
+})
+

@@ -35,7 +35,7 @@
                                     <p class="plano__titulo">300 MB</p>
                                     <p class="plano__valor">R$ 99,90</p>
                                     <p class="plano__detalhes" data-nome="300 MB">+ detalhes</p> 
-                                    <button type="button" class="btn__adicionar" data-nome="300 MB" data-valor="99.9">adicionar</button>
+                                    <button type="button" class="internet__adicionar" data-nome="300 MB" data-valor="99.9">adicionar</button>
                                 </div>
                             </div>
 
@@ -44,7 +44,7 @@
                                         <p class="plano__titulo">200 MB</p>
                                         <p class="plano__valor">R$ 79,90</p>
                                         <p class="plano__detalhes" data-nome="200 MB">+ detalhes</p> 
-                                        <button type="button" class="btn__adicionar" data-nome="200 MB" data-valor="79.9">adicionar</button>
+                                        <button type="button" class="internet__adicionar" data-nome="200 MB" data-valor="79.9">adicionar</button>
                                     </div>
                                 </div>
 
@@ -53,7 +53,7 @@
                                         <p class="plano__titulo">100 MB</p>
                                         <p class="plano__valor">R$ 59,90</p>
                                         <p class="plano__detalhes" data-nome="100 MB">+ detalhes</p> 
-                                        <button type="button" class="btn__adicionar" data-nome="100 MB" data-valor="59.9">adicionar</button>
+                                        <button type="button" class="internet__adicionar" data-nome="100 MB" data-valor="59.9">adicionar</button>
                                     </div>
                                 </div>
                         </div>
@@ -71,7 +71,7 @@
                                     <p class="plano__titulo">Ilimitado fixo</p>
                                     <p class="plano__valor">R$ 19,90</p>
                                     <p class="plano__detalhes" data-nome="ilimitado">+ detalhes</p> 
-                                    <button type="button" class="btn__adicionar" data-nome="Ilimitado Fixo" data-valor="19.9">adicionar</button>
+                                    <button type="button" class="fixo__adicionar" data-nome="Ilimitado Fixo" data-valor="19.9">adicionar</button>
                                 </div>
                             </div>
                         </div>
@@ -87,20 +87,20 @@
                         <div class="tv__planos">
                         
                             <div class="plano" >
-                                <div class="plano__tb" >
+                                <div class="plano__tv" >
                                     <p class="plano__titulo">Ultimate HD</p>
                                     <p class="plano__valor">R$ 65,00</p>
                                     <p class="plano__detalhes" data-nome="Ultimate HD">+ detalhes</p> 
-                                    <button type="button" class="btn__adicionar" data-nome="Ultimate HD" data-valor="65">adicionar</button>
+                                    <button type="button" class="tv__adicionar" data-nome="Ultimate HD" data-valor="65">adicionar</button>
                                 </div>
                             </div>
 
                             <div class="plano" >
-                                <div class="plano__tb" >
+                                <div class="plano__tv" >
                                     <p class="plano__titulo">Full HD</p>
                                     <p class="plano__valor">R$ 46,90</p>
                                     <p class="plano__detalhes" data-nome="Full HD">+ detalhes</p> 
-                                    <button type="button" class="btn__adicionar" data-nome="Full HD" data-valor="46.9">adicionar</button>
+                                    <button type="button" class="tv__adicionar" data-nome="Full HD" data-valor="46.9">adicionar</button>
                                 </div>
                             </div>
                         </div>
@@ -110,12 +110,13 @@
                     </form>
             </section>
 
-
             <section class="carrinho">
-                <p>Meu carrinho</p>
-                <p>Planos selecionados:</p>
-                <ul id="carrinho__planos"></ul>
-                <p id="carrinho__valor" value="0">R$ 0.00</p>
+                    <p class="titulo">Meu carrinho</p>
+                    <p class="descricao">Planos selecionados:</p>
+                    <ul id="carrinho__planos"></ul>
+                    <p id="carrinho__valor" value="0">R$ 0.00</p>
+                    <button type="button" class="finalizar" data-nome="finalizar">Finalizar compra</button>
+                    <p class="limpar" data-nome="limpar">Limpar carrinho</p>
             </section>
         </main>
 
