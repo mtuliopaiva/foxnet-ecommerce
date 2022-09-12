@@ -10,17 +10,26 @@ const finalizar = document.querySelector('.carrinho__finalizar');
 const clear = document.querySelector('.limpar');
 
 var c = 0;
+internet.forEach(plano => {
+    plano.addEventListener('click', evento => {
+        console.log(evento.target.dataset.valor);
+    
+    })
+})
 
 internet.forEach(plano => {
     plano.addEventListener('click', evento => {
         
-        const botoes = document.querySelectorAll('.internet__adicionar');      
+        const botoes = document.querySelectorAll('.internet__adicionar'); 
+        const fixo = document.querySelector('.fixo');    
         desabilita(botoes.length , botoes);
         
-        console.log(evento.path[2]);
-        const fixo = document.querySelector('.fixo');
-        fixo.style.cssText = 'display: block;';
         evento.path[2].style.cssText = 'background: #aeb3cb;';
+        
+
+        fixo.style.cssText = 'visibility:visible;' + 
+        'opacity: 1;' + 
+        'transition: visibility 0s linear 0s, opacity 500ms;';
 
         const selecionadoNome = evento.target.dataset.nome;
         const selecionadoValor = evento.target.dataset.valor;
@@ -47,7 +56,10 @@ fixo.forEach(plano =>{
         desabilita(botoes.length , botoes);
 
 
-        tv.style.cssText = 'display: block;';
+        tv.style.cssText = 'visibility:visible;' + 
+        'opacity: 1;' + 
+        'transition: visibility 0s linear 0s, opacity 500ms;';
+        
         evento.path[2].style.cssText = 'background: #aeb3cb;';
 
         c = parseFloat(c) + parseFloat(selecionadoValor);
@@ -97,6 +109,8 @@ function habilita(){
 }
 function limparCarrinho(){
     const todosPlanos = document.querySelectorAll('.plano');
+    const fixo = document.querySelector('.fixo');
+    const tv = document.querySelector('.tv');
 
     c=0;
     carrinhoValor.textContent='R$'+''+ c.toFixed(2);
@@ -105,5 +119,6 @@ function limparCarrinho(){
     for(var i=0; i < todosPlanos.length ; i++){
         todosPlanos[i].style.cssText = 'background: #ffffff;';
     }
-    
+    fixo.style.cssText = 'opacity: 0;';
+    tv.style.cssText = 'opacity: 0;';
 }

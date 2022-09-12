@@ -117,9 +117,13 @@ main{
 .btn__adicionar::first-letter{
     text-transform: uppercase;
 }
+
 .fixo, .tv{
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 350ms, opacity 500ms;
 }
+
 .carrinho{
     display: flex;
     flex-direction: column;
