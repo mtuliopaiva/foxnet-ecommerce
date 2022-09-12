@@ -1,8 +1,3 @@
-/* PALETA DE CORES 
-color: #FE6700
-color: #ffffff
-color:  */
-
 @font-face {
     font-family: 'Inter';
     src: url('../font/Inter-VariableFont_slnt\,wght.ttf');
@@ -10,6 +5,8 @@ color:  */
 
 /*CSS cabecalho*/
 .cabecalho{
+    display: flex;
+    flex-direction: row;
     background: #ffffff;
     padding: 1% 1%;
 }
@@ -27,6 +24,7 @@ color:  */
 }
 main{
     background: #F5F5F5;
+    height: auto;
 }
 /*CSS titulos e descrições - Internet, telefone fixo e TV*/
 .internet__descricao, .fixo__descricao, .tv__descricao{
@@ -52,7 +50,7 @@ main{
     display: flex;
     flex-direction: row;
     margin: 1% 5%;
-    
+
 }
 
 /*CSS para cards INTERNET*/
@@ -128,11 +126,22 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 20%;
+    border-radius: 10%;
+    margin: 0 auto;
+}
+#carrinho__valor{
+    font-weight: 700;
+}
+.carrinho__planos{
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
 }
 .finalizar{
     font-family: "Inter", sans-serif;
-    font-size: 1.5rem;
-    background: #74a73f;
+    font-size: 1rem;
+    background: #A82472;
     color: #ffffff;
     cursor: pointer;
 }
@@ -144,10 +153,5 @@ main{
 }
 .limpar:hover {
     text-decoration: underline;
-    
 }
-.carrinho__planos{
-    color: #000000;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
-}
+

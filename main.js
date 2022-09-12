@@ -1,97 +1,84 @@
-const internet = document.querySelectorAll('.internet__adicionar');
-const fixo = document.querySelectorAll('.fixo__adicionar');
-const tv = document.querySelectorAll('.tv__adicionar');
+const internetBotoes = document.querySelectorAll('.internet__adicionar');
+const fixoBotoes = document.querySelectorAll('.fixo__adicionar');
+const tvBotoes = document.querySelectorAll('.tv__adicionar');
+
+
+const planosFixo = document.querySelector('.fixo');
+const planosTv = document.querySelector('.tv');
+
 const lista = document.querySelector('#carrinho__planos');
-
-
-
 var carrinhoValor = document.querySelector('#carrinho__valor');
 const finalizar = document.querySelector('.carrinho__finalizar');
 const clear = document.querySelector('.limpar');
 
 var c = 0;
-internet.forEach(plano => {
-    plano.addEventListener('click', evento => {
-        console.log(evento.target.dataset.valor);
-    
-    })
-})
 
-internet.forEach(plano => {
+
+internetBotoes.forEach(plano => {
     plano.addEventListener('click', evento => {
-        
-        const botoes = document.querySelectorAll('.internet__adicionar'); 
-        const fixo = document.querySelector('.fixo');    
-        desabilita(botoes.length , botoes);
-        
+
+        desabilita(internetBotoes.length , internetBotoes);
+
         evento.path[2].style.cssText = 'background: #aeb3cb;';
-        
 
-        fixo.style.cssText = 'visibility:visible;' + 
+        planosFixo.style.cssText = 'visibility:visible;' + 
         'opacity: 1;' + 
         'transition: visibility 0s linear 0s, opacity 500ms;';
 
         const selecionadoNome = evento.target.dataset.nome;
         const selecionadoValor = evento.target.dataset.valor;
         c = parseFloat(c) + parseFloat(selecionadoValor);
-        console.log(c);
-
         carrinhoValor.textContent='R$'+''+ c.toFixed(2);
 
         const li = document.createElement("li");
-
         li.appendChild(document.createTextNode('Internet' + ' ' + selecionadoNome));
         lista.appendChild(li); //adiciona um lista na ul
     }
     )
 })
-fixo.forEach(plano =>{
+fixoBotoes.forEach(plano =>{
     plano.addEventListener('click', evento => {
-        
-        const selecionadoNome = evento.target.dataset.nome;
-        const selecionadoValor = evento.target.dataset.valor;
-        const tv = document.querySelector('.tv');
 
-        const botoes = document.querySelectorAll('.fixo__adicionar');      
-        desabilita(botoes.length , botoes);
+        desabilita(fixoBotoes.length , fixoBotoes);
 
+        evento.path[2].style.cssText = 'background: #aeb3cb;';
 
-        tv.style.cssText = 'visibility:visible;' + 
+        planosTv.style.cssText = 'visibility:visible;' + 
         'opacity: 1;' + 
         'transition: visibility 0s linear 0s, opacity 500ms;';
-        
-        evento.path[2].style.cssText = 'background: #aeb3cb;';
 
-        c = parseFloat(c) + parseFloat(selecionadoValor);
-        console.log(c);
-
-
-        carrinhoValor.textContent='R$'+''+ c.toFixed(2);
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(selecionadoNome));
-        lista.appendChild(li); //adiciona um lista na ul
-    })
-})
-
-tv.forEach(plano =>{
-    plano.addEventListener('click', evento => {
         const selecionadoNome = evento.target.dataset.nome;
-        const selecionadoValor = evento.target.dataset.valor;
+        const selecionadoValor = evento.target.dataset.valor;     
         
-        const botoes = document.querySelectorAll('.tv__adicionar');      
-        desabilita(botoes.length , botoes);
-
         c = parseFloat(c) + parseFloat(selecionadoValor);
-        console.log(c);
-        evento.path[2].style.cssText = 'background: #aeb3cb;';
         carrinhoValor.textContent='R$'+''+ c.toFixed(2);
+
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(selecionadoNome));
         lista.appendChild(li); //adiciona um lista na ul
     })
 })
 
-clear.addEventListener('click', evento => {
+tvBotoes.forEach(plano =>{
+    plano.addEventListener('click', evento => {
+
+        desabilita(tvBotoes.length , tvBotoes);
+
+        evento.path[2].style.cssText = 'background: #aeb3cb;';
+
+        const selecionadoNome = evento.target.dataset.nome;
+        const selecionadoValor = evento.target.dataset.valor;     
+        
+        c = parseFloat(c) + parseFloat(selecionadoValor);
+        carrinhoValor.textContent='R$'+''+ c.toFixed(2);
+
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(selecionadoNome));
+        lista.appendChild(li); //adiciona um lista na ul
+    })
+})
+
+clear.addEventListener('click', () => {
     limparCarrinho();    
 })
 
@@ -109,8 +96,6 @@ function habilita(){
 }
 function limparCarrinho(){
     const todosPlanos = document.querySelectorAll('.plano');
-    const fixo = document.querySelector('.fixo');
-    const tv = document.querySelector('.tv');
 
     c=0;
     carrinhoValor.textContent='R$'+''+ c.toFixed(2);
@@ -119,6 +104,6 @@ function limparCarrinho(){
     for(var i=0; i < todosPlanos.length ; i++){
         todosPlanos[i].style.cssText = 'background: #ffffff;';
     }
-    fixo.style.cssText = 'opacity: 0;';
-    tv.style.cssText = 'opacity: 0;';
+    planosFixo.style.cssText = 'opacity: 0;';
+    planosTv.style.cssText = 'opacity: 0;';
 }

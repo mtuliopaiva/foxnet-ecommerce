@@ -13,59 +13,49 @@
     </head>
     <body>
         <header class="cabecalho">
-        
-            <h1 class="cabecalho__titulo">FoxNet</h1>
-            <p class="cabecalho__descricao">O melhor provedor de internet do Brasil</p>
-
-            <section class="carrinho">
-                <p class="titulo">Meu carrinho</p>
-                <p class="descricao">Planos selecionados:</p>
-                <ul id="carrinho__planos"></ul>
-                <p id="carrinho__valor" value="0">R$ 0.00</p>
-                <button type="button" class="finalizar" data-nome="finalizar">Finalizar compra</button>
-                <p class="limpar" data-nome="limpar">Limpar carrinho</p>
-        </section>
+            
+            
+                <h1 class="cabecalho__titulo">FoxNet</h1>
+                <p class="cabecalho__descricao">O melhor provedor de internet do Brasil</p>
         </header>
 
         <main>
-
             <section class="planos">
                 <form class="form__planos">
-
-
                     <div class="internet">
                         <div class="internet__descricao">
                             <h2 class="titulo">Internet</h2>
                             <p class="descricao">Selecione um plano de internet para continuar:</p>
                         </div>
-                        <div class="internet__planos">
-                            <div class="plano" >
-                                <div class="plano__internet" >
-                                    <p class="plano__titulo">300 MB</p>
-                                    <p class="plano__valor">R$ 99,90</p>
-                                    <p class="plano__detalhes" data-nome="300 MB">+ detalhes</p> 
-                                    <button type="button" class="internet__adicionar" data-nome="300 MB" data-valor="99.9">adicionar</button>
+                        
+                            <div class="internet__planos">
+                                <div class="plano" >
+                                    <div class="plano__internet" >
+                                        <p class="plano__titulo">300 MB</p>
+                                        <p class="plano__valor">R$ 99,90</p>
+                                        <p class="plano__detalhes" data-nome="300 MB">+ detalhes</p> 
+                                        <button type="button" class="internet__adicionar" data-nome="300 MB" data-valor="99.9">adicionar</button>
+                                    </div>
                                 </div>
+
+                                    <div class="plano" >
+                                        <div class="plano__internet" >
+                                            <p class="plano__titulo">200 MB</p>
+                                            <p class="plano__valor">R$ 79,90</p>
+                                            <p class="plano__detalhes" data-nome="200 MB">+ detalhes</p> 
+                                            <button type="button" class="internet__adicionar" data-nome="200 MB" data-valor="79.9">adicionar</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="plano" >
+                                        <div class="plano__internet" >
+                                            <p class="plano__titulo">100 MB</p>
+                                            <p class="plano__valor">R$ 59,90</p>
+                                            <p class="plano__detalhes" data-nome="100 MB">+ detalhes</p> 
+                                            <button type="button" class="internet__adicionar" data-nome="100 MB" data-valor="59.9">adicionar</button>
+                                        </div>
+                                    </div>
                             </div>
-
-                                <div class="plano" >
-                                    <div class="plano__internet" >
-                                        <p class="plano__titulo">200 MB</p>
-                                        <p class="plano__valor">R$ 79,90</p>
-                                        <p class="plano__detalhes" data-nome="200 MB">+ detalhes</p> 
-                                        <button type="button" class="internet__adicionar" data-nome="200 MB" data-valor="79.9">adicionar</button>
-                                    </div>
-                                </div>
-
-                                <div class="plano" >
-                                    <div class="plano__internet" >
-                                        <p class="plano__titulo">100 MB</p>
-                                        <p class="plano__valor">R$ 59,90</p>
-                                        <p class="plano__detalhes" data-nome="100 MB">+ detalhes</p> 
-                                        <button type="button" class="internet__adicionar" data-nome="100 MB" data-valor="59.9">adicionar</button>
-                                    </div>
-                                </div>
-                        </div>
                     </div>
 
                     <div class="fixo">
@@ -113,16 +103,17 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-                    </form>
+            </section>
+            <section class="carrinho">
+                <p class="titulo">Meu carrinho</p>
+                <p class="descricao">Planos selecionados:</p>
+                <ul id="carrinho__planos"></ul>
+                <p id="carrinho__valor" value="0">R$ 0.00</p>
+                <button type="button" class="finalizar" data-nome="finalizar">Finalizar compra</button>
+                <p class="limpar" data-nome="limpar">Limpar carrinho</p>
             </section>
         </main>
-
-        <footer>
-        </footer>
-
     <script src="./main.js"></script>
     </body>
 </html>
